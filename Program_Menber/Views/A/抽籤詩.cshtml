@@ -1,0 +1,1212 @@
+﻿
+@{
+    ViewBag.Title = "抽籤詩";
+
+}
+<style>
+    .div1 {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        color: #a72128;
+    }
+
+    .div2 {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .a1 {
+        padding: 2px 13px;
+        font-size: 1.3em;
+        color: #a72128;
+        background: #FFB900;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #a72128
+    }
+
+    .a01 {
+        margin: 2px;
+        width: 148px;
+        background-color: #a72128;
+        border-radius: 8px;
+        color: antiquewhite;
+        padding: 2px 13px;
+        font-size: 1.3em;
+    }
+
+    .p01 {
+        position: relative;
+        margin: auto;
+        padding: 30px;
+        display: none;
+        justify-content: center;
+        background-image: url(../../images/back.jpg);
+        background-size: cover;
+        width: 960px;
+        height: 400px;
+    }
+
+    .p02 {
+        position: relative;
+        margin: auto;
+        padding: 30px;
+        justify-content: center;
+        background-image: url(../../images/back.jpg);
+        background-size: cover;
+        width: 960px;
+        height: 400px;
+    }
+
+    .a02 {
+        position: absolute;
+        right: 459px;
+        top: 350px;
+        background-color: #A72128;
+        color: antiquewhite;
+    }
+
+    .a03 {
+        color: #A72128;
+        text-align: center;
+    }
+</style>
+<body>
+    <section id="major">
+        @{ if (ViewBag.id == 1)
+            {
+                <h1 class="div1">第一首</h1>
+            }
+            else if (ViewBag.id == 2)
+            {
+                <h1 class="div1">第二首</h1>
+            }
+            else if (ViewBag.id == 3)
+            {
+                <h1 class="div1">第三首</h1>
+            }
+            else if (ViewBag.id == 4)
+            {
+                <h1 class="div1">第四首</h1>
+            }
+            else if (ViewBag.id == 5)
+            {
+                <h1 class="div1">第五首</h1>
+            }
+            else if (ViewBag.id == 6)
+            {
+                <h1 class="div1">第六首</h1>
+            }
+            else if (ViewBag.id == 7)
+            {
+                <h1 class="div1">第七首</h1>
+            }
+            else if (ViewBag.id == 8)
+            {
+                <h1 class="div1">第八首</h1>
+            }
+            else if (ViewBag.id == 9)
+            {
+                <h1 class="div1">第九首</h1>
+            }
+            else if (ViewBag.id == 10)
+            {
+                <h1 class="div1">第十首</h1>
+            }
+            else if (ViewBag.id == 11)
+            {
+                <h1 class="div1">第十一首</h1>
+            }
+            else if (ViewBag.id == 12)
+            {
+                <h1 class="div1">第十二首</h1>
+            }
+            else if (ViewBag.id == 13)
+            {
+                <h1 class="div1">第十三首</h1>
+            }
+            else if (ViewBag.id == 14)
+            {
+                <h1 class="div1">第十四首</h1>
+            }
+            else if (ViewBag.id == 15)
+            {
+                <h1 class="div1">第十五首</h1>
+            }
+            else if (ViewBag.id == 16)
+            {
+                <h1 class="div1">第十六首</h1>
+            }
+            else if (ViewBag.id == 17)
+            {
+                <h1 class="div1">第十七首</h1>
+            }
+            else if (ViewBag.id == 18)
+            {
+                <h1 class="div1">第十八首</h1>
+            }
+            else if (ViewBag.id == 19)
+            {
+                <h1 class="div1">第十九首</h1>
+            }
+            else if (ViewBag.id == 20)
+            {
+                <h1 class="div1">第二十首</h1>
+            }
+            else if (ViewBag.id == 21)
+            {
+                <h1 class="div1">第二十一首</h1>
+            }
+            else if (ViewBag.id == 22)
+            {
+                <h1 class="div1">第二十二首</h1>
+            }
+            else if (ViewBag.id == 23)
+            {
+                <h1 class="div1">第二十三首</h1>
+            }
+            else if (ViewBag.id == 24)
+            {
+                <h1 class="div1">第二十四首</h1>
+            }
+            else if (ViewBag.id == 25)
+            {
+                <h1 class="div1">第二十五首</h1>
+            }
+            else if (ViewBag.id == 26)
+            {
+                <h1 class="div1">第二十六首</h1>
+            }
+            else if (ViewBag.id == 27)
+            {
+                <h1 class="div1">第二十七首</h1>
+            }
+            else if (ViewBag.id == 28)
+            {
+                <h1 class="div1">第二十八首</h1>
+            }
+            else if (ViewBag.id == 29)
+            {
+                <h1 class="div1">第二十九首</h1>
+            }
+            else if (ViewBag.id == 30)
+            {
+                <h1 class="div1">第三十首</h1>
+            }
+            else if (ViewBag.id == 31)
+            {
+                <h1 class="div1">第三十一首</h1>
+            }
+            else if (ViewBag.id == 32)
+            {
+                <h1 class="div1">第三十二首</h1>
+            }
+            else if (ViewBag.id == 33)
+            {
+                <h1 class="div1">第三十三首</h1>
+            }
+        }
+
+        @*<h1 class="div1">您抽到的籤號是:@ViewBag.id</h1>*@
+        <div1 class="div2">
+            <h2 style="font-size:1em;color:#666">請點選"擲筊"按鈕向月老確認賜籤</h2>
+            <hr />
+            @*<button onclick="show3();">開始擲筊</button>*@
+            <div class="div1" id="a1">
+                <button class="a1" onclick="show3();">擲筊</button>
+            </div>
+            <div>
+                @{ if (ViewBag.id2 == 1 || ViewBag.id2 == 2)
+                    {
+                        <div4 id="div4" style="display:none">
+                            <button class="a1" onclick="show1();">擲第二次筊</button>
+                            <br>
+                            <img src="~/images/聖筊.jpg" style="width: 70px; height: auto; padding-bottom: 30px;" />
+                            <h2>聖筊</h2>
+
+                        </div4>
+
+                        if (ViewBag.id3 == 1 || ViewBag.id3 == 2 || ViewBag.id3 == 3)
+                        {
+
+                            <div2 id="div2" style="display:none">
+
+                                <br>
+                                <img src="~/images/聖筊.jpg" style="width: 70px; height: auto; padding-bottom: 30px;" />
+                                <h2>聖筊</h2>
+                                <button class="a1" onclick="show2()">看籤詩</button>
+
+                            </div2>
+                            <div3 id="div3" style="display:none">
+                                <div class="p02">
+                                    <h1 class="a03">@ViewBag.yy.s籤等</h1>
+                                    <hr />
+                                    <h4 style="color: #A72128">籤詩</h4>
+                                    <br />
+                                    <h5>@ViewBag.yy.s內文</h5>
+                                    <br />
+                                    <h4 style="color: #A72128">籤解</h4>
+                                    <br />
+                                    <h5>@ViewBag.yy.s籤解</h5>
+                                </div>
+                                <br />
+                                <button class="a1" onclick="reload();">重新抽籤</button>
+                                <hr />
+                                @*<跳至 Line 官方帳號>*@
+
+                               
+
+                                <i class="fab fa-line fa-beat fa-3x " style="color:red"></i>
+
+                                <a href="https://line.me/ti/p/022ydjcz">
+                                  <button class="a1">
+                                    點我加入我們Line，老師線上為您解籤</button>
+                                </a>
+                            </div3>
+                         
+                        }
+                        else if (ViewBag.id3 == 4)
+                        {
+                            <div2 id="div2" style="display:none">
+                                <br>
+                                <img src="~/images/陰筊.jpg" style="width: 70px; height: auto; padding-bottom: 30px;" />
+                                <h2>陰筊，請重新求籤</h2>
+                                <button class="a1" onclick="reload();">重新抽籤</button>
+                            </div2>
+                        }
+                        else if (ViewBag.id3 == 5)
+                        {
+                            <div2 id="div2" style="display:none">
+                                <br>
+                                <img src="~/images/笑筊.jpg" style="width: 70px; height: auto; padding-bottom: 30px;" />
+                                <h2>笑筊，請重新求籤</h2>
+                                <button class="a1" onclick="reload();">重新抽籤</button>
+                            </div2>
+                        }
+
+
+
+                    }
+                    else if (ViewBag.id2 == 3)
+                    {
+                        @*<h2>請點選"擲筊"按鈕向月老確認賜籤</h2>
+                        <button onclick="show3();">開始擲茭</button>*@
+                        <div4 id="div4" style="display:none">
+                            <br>
+                            <img src="~/images/陰筊.jpg" style="width: 70px; height: auto; padding-bottom: 30px;" />
+                            <h2>陰筊，請重新求籤</h2>
+                            <button class="a1" onclick="reload();">重新抽籤</button>
+                        </div4>
+                    }
+                    else if (ViewBag.id2 == 4)
+                    {
+                        @*<h2>請點選"擲筊"按鈕向月老確認賜籤</h2>
+                        <button onclick="show3();">開始擲茭</button>*@
+                        <div4 id="div4" style="display:none">
+                            <br>
+                            <img src="~/images/笑筊.jpg" style="width: 70px; height: auto; padding-bottom: 30px;" />
+                            <h2>笑筊，請重新抽籤</h2>
+                            <button class="a1" onclick="reload();">重新抽籤</button>
+                        </div4>
+                    }
+                }
+            </div>
+        </div1>
+        <br />
+        <div class="p01" id="popbox">
+            <h1 class="a03">上上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>久旱逢甘雨，他鄉遇故知，洞房花燭夜，金榜提名時。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>大吉大利之象，平常所謂雙喜臨門，已是罕見，甘今四喜臨門，真是人間少有，世上無雙。</h5>
+            <button class="a02" onclick="popclose();">離開</button>
+
+        </div>
+
+        <div class="p01" id="popbox2">
+            <h1 class="a03">上上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>因荷而得藕，有杏不須梅。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>此詩文者以同音諧之。因荷「何」而得藕「偶」，有杏「幸」不需梅「媒」者。君汝可知道，因荷之生方得蓮藕，為何我能得偶，我亦不得而知，爾是可「幸」運之人也。自然不須「梅」，媒來灼之。君之鴻運，無人可與倫比者也。</h5>
+            <button class="a02" onclick="popclose2();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox3">
+            <h1 class="a03">上上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>意中人，人中意，只那些無情花也情痴。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>一般的解語，雙頭學並棲。一己之心，盡了人事，必有精誠所至金石為開之時，易言之，真情表露時，連那些不可言語之花鳥亦可致意，情之到，緣分附之，必有時機之來到。</h5>
+            <button class="a02" onclick="popclose3();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox4">
+            <h1 class="a03">上上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>可以托六尺之孤，可以寄百里之命。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>對方是你可以全心全意對待之人，是您的貴人，女嫁之人是值得託付終生之人，男娶之妻，是為有幫夫運之人。</h5>
+            <button class="a02" onclick="popclose4();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox5">
+            <h1 class="a03">上吉</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>風弄竹聲，只道金珮響；月移花影，疑是玉人來。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>春風一動，竹葉搖晃，沙沙作響。啻可聽到金珮在響。月日一日日地去，花影見了，心底下，疑玉人來，繇此可知，君之事已近。</h5>
+            <button class="a02" onclick="popclose5();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox6">
+            <h1 class="a03">上吉</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>夫婦也，昆弟也。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>一生結為夫妻，感情如兄弟一般，亦即感情如手足之情深，相敬如賓，決心結為連理之枝，飛於天空之比翼鳥，終生得到幸福。</h5>
+            <button class="a02" onclick="popclose6();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox7">
+            <h1 class="a03">上吉</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>白雲初晴，幽鳥相逐。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>以往您的日子是昏暗晦澀的，如今一掃所有的霉氣，您所求姻緣，必定可成，而且是令人羨慕的，放手去做吧。</h5>
+            <button class="a02" onclick="popclose7();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox8">
+            <h1 class="a03">上上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>喜耦日配。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>與他（她）是否合得來，只要經過一段時間交往，認為可合者，就不必多考慮，姻緣已是命定，唯必有善果結之。</h5>
+            <button class="a02" onclick="popclose8();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox9">
+            <h1 class="a03">大上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>永老無別離，萬古常團聚，願天下有情人都成眷屬。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>君之運也，紅而紫者，永老無分離，萬古常生活團聚在一起，天下之情人成眷之後，都願伊人百年和合，琴瑟和鳴，白頭偕老耶。</h5>
+            <button class="a02" onclick="popclose9();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox10">
+            <h1 class="a03">大吉</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>是謂鳳凰于飛，和鳴鏘鏘。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>您現在必能得到良緣，如一對翱翔空中之鳳凰，似琴瑟之合鳴，君必能與伴侶永合和鳴，白頭偕老。</h5>
+            <button class="a02" onclick="popclose10();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox11">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>投我以木桃，報我以瓊瑤。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>朋友送我木桃，如野人之獻芹者，我必心存感激並報以瓊瑤之玉。食人一兩必報之以斤，換言之，自己以誠待人，將得善果。</h5>
+            <button class="a02" onclick="popclose11();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox12">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>心苟不愆，何惜於人言。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>一個人如果心存正念，無違背道德之事，自不怕人言，自然心安理得，再言之，事之無可奉告之於人之時，心內無疚於人之時，自無煩噪之時，此乃人生永樂之道也。</h5>
+            <button class="a02" onclick="popclose12();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox13">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>
+                再，斯可矣。
+            </h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>如果這一次不能成功，再來一次嘗試，必能有成功之機會，千萬不可氣餒，儘管放手去做，成功在望。</h5>
+            <button class="a02" onclick="popclose13();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox14">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>經之營之，不日成之。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>日日下功夫，苦心經營，必能有成功的一天。千方百計的去接近對方，並且用心對待，必有大成之時，信之可行也。</h5>
+            <button class="a02" onclick="popclose14();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox15">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>更灑遍客舍青青，千縷柳色新。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>靜待春雨來臨，必有煥然一新的氣象，春景已呈現在眼前，您已可靜待佳音之到來。</h5>
+            <button class="a02" onclick="popclose15();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox16">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>勸君莫惜金褸衣，勸君惜取少年時。花開堪折直須折，莫待無花空折枝。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>少年時光易逝，豈可讓它留白，輕易蹉跎，所以必須把握住機會，不要輕易放棄，花可摘時則摘之，到無花之時，折空枝又有何益？年輕歲月是人生的黃金時代，如無把握時機，猶如花開之後方空折枝，應好好珍惜。</h5>
+            <button class="a02" onclick="popclose16();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox17">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>兩情若是久長時，又豈在朝朝暮暮。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>兩人之間切不可因無法朝暮相處而患得患失，因這份真感不會因時空的阻隔而變質，目前的情況是一時的，他日必有相聚之時，何必計較一時的分離呢？</h5>
+            <button class="a02" onclick="popclose17();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox18">
+            <h1 class="a03">上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>
+                昨夜江邊春草生，艨艨巨艦一毛輕，向來枉費推移力，此日中流自在行。
+            </h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>您目前的運勢有如從嚴冬中甦醒，以往覺得非常費力的事，現在卻如舉一毛之輕，以往的晦氣一掃而空，好事就在眼前。</h5>
+            <button class="a02" onclick="popclose18();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox19">
+            <h1 class="a03">上平</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>在幽閨自憐。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>為何如今您尚未遇終生之伴侶？在古代女子足不出戶，男兒亦不得隨，必憑父母之命、媒灼之言成婚，惟世局已變，男女均該走出家門，多多交往，先友後婚可也。</h5>
+            <button class="a02" onclick="popclose19();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox20">
+            <h1 class="a03">上平</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>山窮水盡疑無路，柳暗花明又一村。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>在心灰意冷，萬念俱灰之際，峰迴路轉，來了一線生機，為您帶來無限的希望，您已漸入佳境，必有佳遇。</h5>
+            <button class="a02" onclick="popclose20();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox21">
+            <h1 class="a03">上平</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>良人者，所仰望必終身者也，今若此。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>選擇對象必須以終生能堅守為要件，本心為假冒，終究會有露出馬腳的時候，如果知道對方心存不軌，或是非誠心相守，應漸行疏遠，甚至與他斷交，否則將有悔不當初之憾。</h5>
+            <button class="a02" onclick="popclose21();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox22">
+            <h1 class="a03">上平</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>必先苦其心志。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>為解決一件事，不管任何人也得先苦其心志才有完成之時，婚姻如此，兩人必須先倍嚐辛苦，才可能有好的結果。</h5>
+            <button class="a02" onclick="popclose22();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox23">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>求則得之，捨則失之。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>您目前的運勢是屬好運，苦得機會必須好好把握，努力追求必有好的結果，若喪失此機會，則將很難再有良好的因緣，既有好的機會，就善加把握，千萬不可捨去。</h5>
+            <button class="a02" onclick="popclose23();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox24">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>不愧於天，不畏於人。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>人之言行方正，仰不愧於天，俯不怍於地，視人生之財如浮雲，內心守正，萬事不懼。</h5>
+            <button class="a02" onclick="popclose24();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox25">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>期我乎桑中，要我乎上宮，送我乎淇之上矣。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>男女之婚姻是終生大事，是決定人生一生幸福之大事，爰之，不得以逾越，不正，強行等，手叢行之，必須以正當之方式取得對方之芳心，兩廂情願之情形下完成，如違反上述原則，雖結合，兩者之間貌合神離，不得行之，否則良緣亦為此破壞無遺。</h5>
+            <button class="a02" onclick="popclose25();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox26">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>河漢清且淺，相去復幾許，盈盈一水間，脈脈不得語。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>楚漢之界，被一條輕又淺的河流所隔，去到對岸應不是難事，但是卻如相隔千山萬水，連一句話也說不出來。所以可知您目前的感情狀況，為環境所阻，或因學業、或因事業，目前無可成之望，應暫時耐心等待時機。</h5>
+            <button class="a02" onclick="popclose26();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox27">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>卜以決疑，不疑何卜。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>命運是操在自己手中，不是由他人可決定的。由此可知，不管什麼問題，該由自己衡量，毅然做出決定，信仰可以，但是決定權仍應操在您自己手中，不應過度迷信。</h5>
+            <button class="a02" onclick="popclose27();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox28">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>明明如月，何時可掇。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>對方如水中月，雖然皎潔明亮，但若欲於水中撈月，終將徒勞無功。勸您應面對現實，實事求是，千萬不要活在幻想中。</h5>
+            <button class="a02" onclick="popclose28();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox29">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>落霞與孤鶩齊飛，秋水共長天一色。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>落霞與孤騖。均是寂寞。寥落之相也。於落霞之中，單象影隻之騖飛行著。予人深感秋盡冬之來。旺盛蕃衛之夏季已過火已盡。如此際遇之時，君汝宜樂善不倦積德當先，待時之時。自有合成之時。</h5>
+            <button class="a02" onclick="popclose29();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox30">
+            <h1 class="a03">中上</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>踏破鐵鞋無覓處，得來全不費工夫。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>原本雖費盡心力，皆無所獲，到頭來兩手空空，唯不知何人突然帶來了好運，得來皆不費工夫，簡直像舉手之勞一般。</h5>
+            <button class="a02" onclick="popclose30();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox31">
+            <h1 class="a03">平</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>有心栽花花不開，無心插柳柳成蔭。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>悉心照顧的花兒卻中途夭折，簡單插下池邊的柳枝竟蓬勃發芽，婚姻又如此，本是有意甲家之女，卻娶乙家之女，是非常奇妙之事耶！</h5>
+            <button class="a02" onclick="popclose31();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox32">
+            <h1 class="a03">下</h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>以若所為，求若所欲，猶緣木求魚也。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>如以您目前的言行，想要達成目標，恐怕就像緣木求魚，須加以修正，否則願望難成。</h5>
+            <button class="a02" onclick="popclose32();">離開</button>
+        </div>
+
+        <div class="p01" id="popbox33">
+            <h1 class="a03"> </h1>
+            <hr />
+            <h4 style="color: #A72128">籤詩</h4>
+            <br />
+            <h5>籤頭百事良，添油大吉昌。萬般皆如意，富貴福壽長。</h5>
+            <br />
+            <h4 style="color: #A72128">籤解</h4>
+            <br />
+            <h5>此籤暗示百事皆成，所以神明讓占卜者添個香油錢意思意思即可。若卜者仍覺得疑惑沒有獲得解決，可以再抽一次籤詢問。</h5>
+            <button class="a02" onclick="popclose33();">離開</button>
+        </div>
+        <hr />
+        <br />
+        <div style="text-align:center">
+            <button onclick="popbox();" class="a01">第一首</button>
+            <button onclick="popbox2();" class="a01">第二首</button>
+            <button onclick="popbox3();" class="a01">第三首</button>
+            <button onclick="popbox4();" class="a01">第四首</button>
+            <button onclick="popbox5();" class="a01">第五首</button>
+            <button onclick="popbox6();" class="a01">第六首</button>
+            <button onclick="popbox7();" class="a01">第七首</button>
+            <button onclick="popbox8();" class="a01">第八首</button>
+            <button onclick="popbox9();" class="a01">第九首</button>
+            <button onclick="popbox10();" class="a01">第十首</button>
+            <button onclick="popbox11();" class="a01">第十一首</button>
+            <button onclick="popbox12();" class="a01">第十二首</button>
+            <button onclick="popbox13();" class="a01">第十三首</button>
+            <button onclick="popbox14();" class="a01">第十四首</button>
+            <button onclick="popbox15();" class="a01">第十五首</button>
+            <button onclick="popbox16();" class="a01">第十六首</button>
+            <button onclick="popbox17();" class="a01">第十七首</button>
+            <button onclick="popbox18();" class="a01">第十八首</button>
+            <button onclick="popbox19();" class="a01">第十九首</button>
+            <button onclick="popbox20();" class="a01">第二十首</button>
+            <button onclick="popbox21();" class="a01">第二十一首</button>
+            <button onclick="popbox22();" class="a01">第二十二首</button>
+            <button onclick="popbox23();" class="a01">第二十三首</button>
+            <button onclick="popbox24();" class="a01">第二十四首</button>
+            <button onclick="popbox25();" class="a01">第二十五首</button>
+            <button onclick="popbox26();" class="a01">第二十六首</button>
+            <button onclick="popbox27();" class="a01">第二十七首</button>
+            <button onclick="popbox28();" class="a01">第二十八首</button>
+            <button onclick="popbox29();" class="a01">第二十九首</button>
+            <button onclick="popbox30();" class="a01">第三十首</button>
+            <button onclick="popbox31();" class="a01">第三十一首</button>
+            <button onclick="popbox32();" class="a01">第三十二首</button>
+            <button onclick="popbox33();" class="a01">頭籤</button>
+        </div>
+        </section>
+</body>
+
+<script>
+    function show1() {
+        document.getElementById('div2').style.display = "block";
+        document.getElementById('div4').style.display = "none";
+    }
+
+    function show2() {
+        document.getElementById('div3').style.display = "block";
+        document.getElementById('div2').style.display = "none";
+        /* document.getElementById('div4').style.display = "none";*/
+    }
+    function show3() {
+        document.getElementById('div4').style.display = "block";
+        document.getElementById('a1').style.display = "none";
+    }
+    function show4() {
+        document.getElementById('div5').style.display = "block";
+    }
+    function reload() {
+        window.history.go(0) = "https://localhost:44304/A/%E6%8A%BD%E7%B1%A4%E8%A9%A9";
+    }
+    function popbox() {
+        var popbox = document.getElementById('popbox')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+
+    }
+    function popbox2() {
+        var popbox = document.getElementById('popbox2')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox3() {
+        var popbox = document.getElementById('popbox3')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox4() {
+        var popbox = document.getElementById('popbox4')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox5() {
+        var popbox = document.getElementById('popbox5')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox6() {
+        var popbox = document.getElementById('popbox6')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox7() {
+        var popbox = document.getElementById('popbox7')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox8() {
+        var popbox = document.getElementById('popbox8')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox9() {
+        var popbox = document.getElementById('popbox9')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox10() {
+        var popbox = document.getElementById('popbox10')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox11() {
+        var popbox = document.getElementById('popbox11')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox12() {
+        var popbox = document.getElementById('popbox12')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox13() {
+        var popbox = document.getElementById('popbox13')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox14() {
+        var popbox = document.getElementById('popbox14')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox15() {
+        var popbox = document.getElementById('popbox15')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox16() {
+        var popbox = document.getElementById('popbox16')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox17() {
+        var popbox = document.getElementById('popbox17')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox18() {
+        var popbox = document.getElementById('popbox18')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox19() {
+        var popbox = document.getElementById('popbox19')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox20() {
+        var popbox = document.getElementById('popbox20')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox21() {
+        var popbox = document.getElementById('popbox21')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox22() {
+        var popbox = document.getElementById('popbox22')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox23() {
+        var popbox = document.getElementById('popbox23')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox24() {
+        var popbox = document.getElementById('popbox24')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox25() {
+        var popbox = document.getElementById('popbox25')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox26() {
+        var popbox = document.getElementById('popbox26')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox27() {
+        var popbox = document.getElementById('popbox27')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox28() {
+        var popbox = document.getElementById('popbox28')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox29() {
+        var popbox = document.getElementById('popbox29')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox30() {
+        var popbox = document.getElementById('popbox30')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox31() {
+        var popbox = document.getElementById('popbox31')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox32() {
+        var popbox = document.getElementById('popbox32')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+    function popbox33() {
+        var popbox = document.getElementById('popbox33')
+        popbox.style.display = "block";
+        var popbox = document.getElementById('hide')
+        popbox.style.display = "none";
+    }
+
+
+    function popclose() {
+        var popclose = document.getElementById('popbox')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose2() {
+        var popclose = document.getElementById('popbox2')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose3() {
+        var popclose = document.getElementById('popbox3')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose4() {
+        var popclose = document.getElementById('popbox4')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose5() {
+        var popclose = document.getElementById('popbox5')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose6() {
+        var popclose = document.getElementById('popbox6')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose7() {
+        var popclose = document.getElementById('popbox7')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose8() {
+        var popclose = document.getElementById('popbox8')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose9() {
+        var popclose = document.getElementById('popbox9')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose10() {
+        var popclose = document.getElementById('popbox10')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose11() {
+        var popclose = document.getElementById('popbox11')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose12() {
+        var popclose = document.getElementById('popbox12')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose13() {
+        var popclose = document.getElementById('popbox13')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose14() {
+        var popclose = document.getElementById('popbox14')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose15() {
+        var popclose = document.getElementById('popbox15')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose16() {
+        var popclose = document.getElementById('popbox16')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose17() {
+        var popclose = document.getElementById('popbox17')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose18() {
+        var popclose = document.getElementById('popbox18')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose19() {
+        var popclose = document.getElementById('popbox19')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose20() {
+        var popclose = document.getElementById('popbox20')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose21() {
+        var popclose = document.getElementById('popbox21')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose22() {
+        var popclose = document.getElementById('popbox22')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose23() {
+        var popclose = document.getElementById('popbox23')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose24() {
+        var popclose = document.getElementById('popbox24')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose25() {
+        var popclose = document.getElementById('popbox25')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose26() {
+        var popclose = document.getElementById('popbox26')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose27() {
+        var popclose = document.getElementById('popbox27')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose28() {
+        var popclose = document.getElementById('popbox28')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose29() {
+        var popclose = document.getElementById('popbox29')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose30() {
+        var popclose = document.getElementById('popbox30')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose31() {
+        var popclose = document.getElementById('popbox31')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose32() {
+        var popclose = document.getElementById('popbox32')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+    function popclose33() {
+        var popclose = document.getElementById('popbox33')
+        popclose.style.display = "none";
+        var popclose = document.getElementById('hide')
+        popclose.style.display = "block";
+    }
+
+</script>

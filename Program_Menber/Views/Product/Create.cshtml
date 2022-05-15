@@ -1,0 +1,65 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+}
+<section id="major">
+<h2>訂單確認</h2>
+<form method="post">
+    <input type="hidden" name="oid">
+    <input type="hidden" name="omid" >
+    <p>
+        下單日期<br />
+        <input type="text" name="odate" value="@DateTime.Now.ToShortDateString().ToString()" required="required">
+    </p>
+    
+    <p>
+        點燈數量<br />
+        
+        <select name="ounit" id="number1" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </p>
+    <p>
+        總金額 單價=300，按計算獲得總金額<br />
+        <input type="hidden" id="op" value="*" style="width:20px; text-align:center;" />
+        <input type="text" size="10" id="number2" value="300" />
+        <button onclick="calculate()">計算</button>
+        <input type="text" size="10" name="opayment" id="result" />
+        <script>
+            function calculate() {
+                var s1 = document.getElementById('number1').value;
+                var s2 = document.getElementById('number2').value;
+                var n1 = parseInt(s1);
+                var n2 = parseInt(s2);
+                var op = document.getElementById('op').value;
+                var n3;
+                switch (op) {
+                    
+                    case '*':
+                        n3 = n1 * n2;
+                        break;
+                }
+                document.getElementById('result').value = n3;
+            }
+        </script>
+
+    </p>
+    
+
+
+    <p><input type="submit" value="送出" /></p>
+    <p>
+        @Html.ActionLink("修改訂單", "pdetail", "Product")
+    </p>
+</form>
+</section>

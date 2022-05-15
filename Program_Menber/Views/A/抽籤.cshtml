@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "抽籤";
+}
+<div>
+    <section id="major">
+    <h2>您抽到的籤號是:@ViewBag.id</h2>
+    <button onclick="reload();">開始擲茭</button>
+</div>
+</section>
+<script>
+    function reload() {
+        document.location.href = "https://localhost:44321/A/%E6%8A%BD%E7%B1%A4%E8%A9%A9";
+    }
+</script>
+
+

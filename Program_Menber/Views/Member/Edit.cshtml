@@ -1,0 +1,52 @@
+﻿@model Program_Menber.Models.CMember
+
+@{
+    ViewBag.Title = "Edit";
+}
+<section id="major">
+<h2>修改資料</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="mid" value="@Model.mid">
+    <p>
+        會員姓名<br />
+        <input type="text" name="mname" value="@Model.mname">
+    </p>
+    <p>
+        生日<br />
+        <input type="text" name="mbirth" value="@Model.mbirth">
+    </p>
+    <p>
+        性別<br />
+        <input type="text" name="mgender" value="@Model.mgender">
+    </p>
+    <p>
+        email<br />
+        <input type="text" name="memail" value="@Model.memail">
+    </p>
+    <p>
+        電話<br />
+        <input type="text" name="mphone" value="@Model.mphone">
+    </p>
+    <p>
+        密碼<br />
+        <input type="text" name="mpw" value="@Model.mpw">
+    </p>
+    <p>
+        居住城市<br />
+        <input type="text" name="mcity" value="@Model.mcity">
+    </p>
+    <p>會員照片</p>
+    <div>
+        <input type="file" name="mphoto" />
+        <input type="submit" value="上傳" />
+    </div>
+
+    <p><input type="submit" value="送出" /></p>
+</form>
+
+
+<div>
+    @Html.ActionLink("Back to List", "display", new { id = Model.mid })
+</div>
+</section>

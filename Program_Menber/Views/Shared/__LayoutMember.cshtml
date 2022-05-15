@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點燈王</title>
+    <link rel="icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS連結 -->
+
+    <link rel="stylesheet" href="~/Content/style.css">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'></link>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+        <a href="" class="logo">
+            <img src="/Images/光明燈.png">
+            點燈王
+        </a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <div class="navbar">
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link" aria-current="page">@Html.ActionLink("主頁", "index", "Home")</a>
+                @*<a class="flex-sm-fill text-sm-center nav-link" href="#">@Html.ActionLink("登入", "orderList", "Order")</a>*@
+                <a class="flex-sm-fill text-sm-center nav-link" href="#">@Html.ActionLink("登出", "Logout", "Home")</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="#">@Session["Welcome"]</a>
+
+                <a class="flex-sm-fill text-sm-center nav-link active" type="button" data-bs-toggle="modal"
+                   data-bs-target="#loginModal" href="#">會員登入</a>
+            </nav>
+
+        </div>
+
+
+    </header>
+
+    <!-- login -->
+
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- modal header -->
+                <div class="modal-header">
+                    <h3><i class="fa fa-user" aria-hidden="true"></i>會員登入</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- modal body -->
+                <div class="modal-body">
+                    <!-- 登入表單 -->
+                    <form action="@Url.Action("Login","Home")" method="post">
+                        <div class="form-group">
+                            <input type="text" id="memail" name="memail" class="account form-control" placeholder="請輸入您的會員帳號">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="mpw" name="mpw" class="password form-control" placeholder="請輸入您的會員密碼">
+                        </div>
+                        <!-- checkbox -->
+                        <div class="form-group">
+                            <input type="checkbox" class="checkbox">記住我的密碼
+                        </div>
+                        <input type="submit" value="登入" class="btn btn-info" />
+                    </form>
+                </div>
+
+                <!-- modal footer -->
+                <div class="modal-footer">
+                    <div class="signup">
+                        <span>尚未成為會員?</span>
+                        <a href="#" type="button" class="member">@Html.ActionLink("立即加入", "Register", "Home")</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- First -->
+    <section id="first">
+        <!-- slideshow -->
+        <div class="box-container">
+            <!-- 輪播牆 -->
+            <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+                <!-- 圖片投影 -->
+                <div class="carousel-inner">
+                    <!-- 第一張圖片 -->
+                    <div class="carousel-item active">
+                        <img class="slide-pic" src="~/Images/樂成宮.jpg" alt="樂成宮">
+                        <div class="carousel-caption">
+                            <h3>樂成宮</h3>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="slide-pic" src="~/Images/萬和宮.jpg" alt="萬和宮">
+                        <div class="carousel-caption">
+                            <h3>萬和宮</h3>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="slide-pic" src="~/Images/鎮瀾宮.jpg" alt="鎮瀾宮">
+                        <div class="carousel-caption">
+                            <h3>鎮瀾宮</h3>
+                        </div>
+                    </div>
+
+                    <!-- 左右按鈕 -->
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button> -->
+                    <!-- 指示按鈕 -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
+
+                        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+
+                        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Second -->
+    <section id="board">
+        <div class="jumbotron bg-danger text-white">
+
+            <div class="content" data-aos="fade-up" data-aos-duration="3000">
+                <h1>點燈王</h1>
+                <P>全台獨家代點燈網站上線啦!!!</P>
+                <a class="btn" href="@Url.Action("Register", "Home")">加入會員</a>
+            </div>
+
+            <img src="~/Images/Q版媽祖.png" alt="媽祖保佑您">
+
+        </div>
+    </section>
+
+    <!-- third -->
+    <section id="major">
+    </section>
+
+
+
+    @RenderBody()
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <img src="~/Images/千里眼.png">
+                </div>
+
+                <div class="col-md-6 text-left">
+                    <h5>聯絡我們</h5>
+                    <p>地址：台中市南屯區公益路二段51號</p>
+                    <p>電話：04-2326-5860</p>
+                    <p>E-MAIL：lightup123@gmail.com</p>
+                </div>
+
+                <!--圓形分享按鈕-->
+                <!--<div id='rndShareBtn'>-->
+                <!-- fb -->
+                <!--<a class='rs_fb' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 FB' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-facebook fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- g+ -->
+                <!--<a class='rs_gplus' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 G+' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-google-plus fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- line -->
+                <!--<a class='rs_line' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 LINE' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-whatsapp fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- plurk -->
+                <!--<a class='rs_plurk' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 PLURK' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-plurk fa-stack-1x'>P</i>
+                    </span>
+                </a>-->
+                <!-- weibo -->
+                <!--<a class='rs_weibo' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 微博' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-weibo fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- twitter -->
+                <!--<a class='rs_twitter' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 TWITTER' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-twitter fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- tumblr -->
+                <!--<a class='rs_tumblr' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 TUMBLR' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-tumblr fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- pinterest -->
+                <!--<a class='rs_pinterest' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 PINTEREST' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-pinterest-p fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- email -->
+                <!--<a class='rs_email' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 EMAIL' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-envelope fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- twitter -->
+                <!--<a class='rs_twitter' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 TWITTER' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-twitter fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- tumblr -->
+                <!--<a class='rs_tumblr' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 TUMBLR' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-tumblr fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- pinterest -->
+                <!--<a class='rs_pinterest' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 PINTEREST' target='_blank'>
+                    <span class='fa-stack fa-lg'>
+                        <i class='fa fa-circle fa-stack-2x'></i>
+                        <i class='fa fa-pinterest-p fa-stack-1x'></i>
+                    </span>
+                </a>-->
+                <!-- email -->
+                <!--<a class='rs_email' href=' ' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 EMAIL' target='_blank'>
+                        <span class='fa-stack fa-lg'>
+                            <i class='fa fa-circle fa-stack-2x'></i>
+                            <i class='fa fa-envelope fa-stack-1x'></i>
+                        </span>
+                    </a>
+                </div>-->
+                <!-- -->
+                <!--</div>-->
+                <!-- -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <img src="~/Images/順風耳.png">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- T0 Top -->
+
+    <script src="~/Scripts/script.js"></script>
+
+    <a href="#first" class="fas fa-angle-up" id="scroll-up"></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 2000
+        });
+
+    </script>
+
+</body>
+</html>

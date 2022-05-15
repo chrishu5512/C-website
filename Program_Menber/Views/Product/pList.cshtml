@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Program_Menber.Models.Product>
+
+@{
+    ViewBag.Title = "pList";
+}
+
+<head>
+   
+    @*<style>
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 600px;
+            width: 900px;
+            background-color: lavender;
+            justify-content: center;
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+            border: black 1px solid;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+    </style>*@
+
+</head>
+
+<body>
+    <section id="major">
+
+
+    <h2>點燈產品</h2>
+
+    @using (Html.BeginForm())
+    {
+        @:
+        <select name="txtcat">
+            <option value="a">請選擇點燈類別</option>
+            <option value="姻緣">姻緣</option>
+            <option value="文昌">文昌</option>
+            <option value="財運">財運</option>
+            <option value="安太歲">安太歲</option>
+            <option value="光明">光明</option>
+        </select>
+        <select name="txtarea">
+            <option value="b">請選擇點燈地點</option>
+            <option value="北台灣">北台灣</option>
+            <option value="中台灣">中台灣</option>
+            <option value="南台灣">南台灣</option>
+        </select>
+        <input type="submit" value="查詢" />
+    }
+
+    <div class="row">
+        @{
+            int count = 0;
+            string photo = "";
+            foreach (var c in Model)
+            {
+                photo = "p" + c.pid + ".jpg";
+                count++;
+                <div class="col-md-4">
+                    <div class="outer">
+                        <div class="upper">
+                            <img src="~/images/@photo" width="200" height="200">
+                            <div class="innertext">
+                                <span>@Html.ActionLink("詳細資訊", "pdetail", new { id = c.pid })</span>
+                                <span>
+                                    <a href="@Url.Action("AddCar","Member")?fPid=@c.pid" onclick="return confirm('確定要下單嗎?')" class="btn btn-primary">
+                                        加入購物車
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="lower">
+                            <h5>@c.ptemp</h5>
+                            <span>@c.pname</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </section>
+</body>
+

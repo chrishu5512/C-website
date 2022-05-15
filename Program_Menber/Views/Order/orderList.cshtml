@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Program_Menber.memberorder>
+
+@{
+    ViewBag.Title = "orderList";
+    Layout = "~/Views/Shared/__LayoutMember.cshtml";
+}
+<section id="major">
+    <h2>客戶資料一覽表</h2>
+    @using (Html.BeginForm())
+    {
+        @:關鍵字姓名<input type="text" name="txtKeyword" />
+        <input type="submit" value="查詢" />
+    }
+    <br />
+
+    @*<p>
+            @Html.ActionLink("Create New", "Create")
+        </p>*@
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.odate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.omid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oproduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.otem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ounit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ofin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.odetail)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.odate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.omid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.oname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.oproduct)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.otem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ounit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.opayment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ofin)
+                </td>
+                <td>
+                    <img src="~/images/@item.opic" width="250" height="200" />
+                    @*@Html.DisplayFor(modelItem => item.opic)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.odetail)
+                </td>
+                <td>
+                    @Html.ActionLink("修改", "orderEdit", new { id = item.oid }) |
+                    @*@Html.ActionLink("Details", "Details", new { id = item.fId }) |*@
+                    @Html.ActionLink("刪除", "orderDelete", "Order", new { id = item.oid },
+                   new { onclick = "return confirm('確定要刪除嗎?')" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </section>

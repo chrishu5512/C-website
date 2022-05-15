@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Program_Menber.member>
+
+@{
+    ViewBag.Title = "display";
+}
+
+<head>
+
+    <style>
+
+        table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="major">
+        <h2 align="center">會員資料</h2>
+        @foreach (var item in Model)
+        {
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mname)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mname)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mbirth)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mbirth)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mgender)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mgender)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.memail)</td>
+                        <td>@Html.DisplayFor(modelItem => item.memail)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mphone)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mphone)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mpw)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mpw)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mcity)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mcity)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.mpic)</td>
+                        <td><img src="~/images/@item.mpic" width="250" height="300" class="rounded mx-auto d-block" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.ActionLink("編輯", "Edit", new { id = item.mid }) |
+                            @Html.ActionLink("訂單", "displayorderById", new { id = item.mid }) |
+
+
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        }
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+        </section>
+</body>

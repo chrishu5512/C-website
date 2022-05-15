@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mydbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="mid" />
+          </Key>
+          <Property Name="mid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mbirth" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mgender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="memail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mphone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mpw" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mcity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mpic" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="memberorder">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="odate" Type="nvarchar" MaxLength="50" />
+          <Property Name="omid" Type="int" />
+          <Property Name="oname" Type="nvarchar" MaxLength="50" />
+          <Property Name="oproduct" Type="nvarchar" MaxLength="50" />
+          <Property Name="otem" Type="nvarchar" MaxLength="50" />
+          <Property Name="ounit" Type="int" />
+          <Property Name="opayment" Type="int" />
+          <Property Name="ofin" Type="nvarchar" MaxLength="50" />
+          <Property Name="opic" Type="nvarchar" MaxLength="50" />
+          <Property Name="odetail" Type="nvarchar(max)" />
+          <Property Name="omemail" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="parea" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pcity" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pcate" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ptemp" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pprice" Type="int" Nullable="false" />
+          <Property Name="ppic" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pintroduce" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pwebsite" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pdetail" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="籤詩">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="s籤號" Type="nvarchar" MaxLength="50" />
+          <Property Name="s籤等" Type="nvarchar" MaxLength="50" />
+          <Property Name="s內文" Type="nvarchar" MaxLength="50" />
+          <Property Name="s籤解" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityContainer Name="mydbModelStoreContainer">
+          <EntitySet Name="member" EntityType="Self.member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="memberorder" EntityType="Self.memberorder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="籤詩" EntityType="Self.籤詩" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mydbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="mid" />
+          </Key>
+          <Property Name="mid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mbirth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mgender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="memail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mpw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mpic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="memberorder">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Name="oid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="odate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="omid" Type="Int32" />
+          <Property Name="oname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="oproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="otem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ounit" Type="Int32" />
+          <Property Name="opayment" Type="Int32" />
+          <Property Name="ofin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="opic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="odetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="omemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parea" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pcity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pcate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ptemp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pprice" Type="Int32" Nullable="false" />
+          <Property Name="ppic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pintroduce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pwebsite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pdetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="籤詩">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s籤號" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="s籤等" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="s內文" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="s籤解" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="mydbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="member" EntityType="Self.member" />
+          <EntitySet Name="memberorder" EntityType="Self.memberorder" />
+          <EntitySet Name="product" EntityType="Self.product" />
+          <EntitySet Name="籤詩" EntityType="Self.籤詩" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mydbModelStoreContainer" CdmEntityContainer="mydbEntities">
+          <EntitySetMapping Name="member">
+            <EntityTypeMapping TypeName="mydbModel.member">
+              <MappingFragment StoreEntitySet="member">
+                <ScalarProperty Name="mid" ColumnName="mid" />
+                <ScalarProperty Name="mname" ColumnName="mname" />
+                <ScalarProperty Name="mbirth" ColumnName="mbirth" />
+                <ScalarProperty Name="mgender" ColumnName="mgender" />
+                <ScalarProperty Name="memail" ColumnName="memail" />
+                <ScalarProperty Name="mphone" ColumnName="mphone" />
+                <ScalarProperty Name="mpw" ColumnName="mpw" />
+                <ScalarProperty Name="mcity" ColumnName="mcity" />
+                <ScalarProperty Name="mpic" ColumnName="mpic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="memberorder">
+            <EntityTypeMapping TypeName="mydbModel.memberorder">
+              <MappingFragment StoreEntitySet="memberorder">
+                <ScalarProperty Name="omemail" ColumnName="omemail" />
+                <ScalarProperty Name="oid" ColumnName="oid" />
+                <ScalarProperty Name="odate" ColumnName="odate" />
+                <ScalarProperty Name="omid" ColumnName="omid" />
+                <ScalarProperty Name="oname" ColumnName="oname" />
+                <ScalarProperty Name="oproduct" ColumnName="oproduct" />
+                <ScalarProperty Name="otem" ColumnName="otem" />
+                <ScalarProperty Name="ounit" ColumnName="ounit" />
+                <ScalarProperty Name="opayment" ColumnName="opayment" />
+                <ScalarProperty Name="ofin" ColumnName="ofin" />
+                <ScalarProperty Name="opic" ColumnName="opic" />
+                <ScalarProperty Name="odetail" ColumnName="odetail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="product">
+            <EntityTypeMapping TypeName="mydbModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="parea" ColumnName="parea" />
+                <ScalarProperty Name="pcity" ColumnName="pcity" />
+                <ScalarProperty Name="pcate" ColumnName="pcate" />
+                <ScalarProperty Name="ptemp" ColumnName="ptemp" />
+                <ScalarProperty Name="pname" ColumnName="pname" />
+                <ScalarProperty Name="pprice" ColumnName="pprice" />
+                <ScalarProperty Name="ppic" ColumnName="ppic" />
+                <ScalarProperty Name="pintroduce" ColumnName="pintroduce" />
+                <ScalarProperty Name="pwebsite" ColumnName="pwebsite" />
+                <ScalarProperty Name="pdetail" ColumnName="pdetail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="籤詩">
+            <EntityTypeMapping TypeName="mydbModel.籤詩">
+              <MappingFragment StoreEntitySet="籤詩">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="s籤號" ColumnName="s籤號" />
+                <ScalarProperty Name="s籤等" ColumnName="s籤等" />
+                <ScalarProperty Name="s內文" ColumnName="s內文" />
+                <ScalarProperty Name="s籤解" ColumnName="s籤解" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mydbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="mid" />
+    </Key>
+    <Property Name="mid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mbirth" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mgender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="memail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mphone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mpw" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mcity" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mpic" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="memberorder">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="odate" Type="nvarchar" MaxLength="50" />
+    <Property Name="omid" Type="int" />
+    <Property Name="oname" Type="nvarchar" MaxLength="50" />
+    <Property Name="oproduct" Type="nvarchar" MaxLength="50" />
+    <Property Name="otem" Type="nvarchar" MaxLength="50" />
+    <Property Name="ounit" Type="int" />
+    <Property Name="opayment" Type="int" />
+    <Property Name="ofin" Type="nvarchar" MaxLength="50" />
+    <Property Name="opic" Type="nvarchar" MaxLength="50" />
+    <Property Name="odetail" Type="nvarchar(max)" />
+    <Property Name="omemail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="pid" />
+    </Key>
+    <Property Name="pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="parea" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pcity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pcate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ptemp" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pprice" Type="int" Nullable="false" />
+    <Property Name="ppic" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pintroduce" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pwebsite" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pdetail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="籤詩">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="s籤號" Type="nvarchar" MaxLength="50" />
+    <Property Name="s籤等" Type="nvarchar" MaxLength="50" />
+    <Property Name="s內文" Type="nvarchar" MaxLength="50" />
+    <Property Name="s籤解" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="mydbModelStoreContainer">
+    <EntitySet Name="member" EntityType="Self.member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="memberorder" EntityType="Self.memberorder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="籤詩" EntityType="Self.籤詩" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

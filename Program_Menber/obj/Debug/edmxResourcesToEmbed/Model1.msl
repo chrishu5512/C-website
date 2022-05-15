@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mydbModelStoreContainer" CdmEntityContainer="mydbEntities">
+    <EntitySetMapping Name="member">
+      <EntityTypeMapping TypeName="mydbModel.member">
+        <MappingFragment StoreEntitySet="member">
+          <ScalarProperty Name="mid" ColumnName="mid" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="mbirth" ColumnName="mbirth" />
+          <ScalarProperty Name="mgender" ColumnName="mgender" />
+          <ScalarProperty Name="memail" ColumnName="memail" />
+          <ScalarProperty Name="mphone" ColumnName="mphone" />
+          <ScalarProperty Name="mpw" ColumnName="mpw" />
+          <ScalarProperty Name="mcity" ColumnName="mcity" />
+          <ScalarProperty Name="mpic" ColumnName="mpic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberorder">
+      <EntityTypeMapping TypeName="mydbModel.memberorder">
+        <MappingFragment StoreEntitySet="memberorder">
+          <ScalarProperty Name="omemail" ColumnName="omemail" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="odate" ColumnName="odate" />
+          <ScalarProperty Name="omid" ColumnName="omid" />
+          <ScalarProperty Name="oname" ColumnName="oname" />
+          <ScalarProperty Name="oproduct" ColumnName="oproduct" />
+          <ScalarProperty Name="otem" ColumnName="otem" />
+          <ScalarProperty Name="ounit" ColumnName="ounit" />
+          <ScalarProperty Name="opayment" ColumnName="opayment" />
+          <ScalarProperty Name="ofin" ColumnName="ofin" />
+          <ScalarProperty Name="opic" ColumnName="opic" />
+          <ScalarProperty Name="odetail" ColumnName="odetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product">
+      <EntityTypeMapping TypeName="mydbModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="parea" ColumnName="parea" />
+          <ScalarProperty Name="pcity" ColumnName="pcity" />
+          <ScalarProperty Name="pcate" ColumnName="pcate" />
+          <ScalarProperty Name="ptemp" ColumnName="ptemp" />
+          <ScalarProperty Name="pname" ColumnName="pname" />
+          <ScalarProperty Name="pprice" ColumnName="pprice" />
+          <ScalarProperty Name="ppic" ColumnName="ppic" />
+          <ScalarProperty Name="pintroduce" ColumnName="pintroduce" />
+          <ScalarProperty Name="pwebsite" ColumnName="pwebsite" />
+          <ScalarProperty Name="pdetail" ColumnName="pdetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="籤詩">
+      <EntityTypeMapping TypeName="mydbModel.籤詩">
+        <MappingFragment StoreEntitySet="籤詩">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="s籤號" ColumnName="s籤號" />
+          <ScalarProperty Name="s籤等" ColumnName="s籤等" />
+          <ScalarProperty Name="s內文" ColumnName="s內文" />
+          <ScalarProperty Name="s籤解" ColumnName="s籤解" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

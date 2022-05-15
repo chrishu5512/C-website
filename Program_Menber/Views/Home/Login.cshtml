@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<style>
+    .col-md-3 {
+        margin: 0px auto;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .col-md-2 {
+        color: darkslategrey;
+        font-size: 2em;
+    }
+
+    input[type="text"] {
+        border: 2px black solid;
+    }
+
+    input[type="password"] {
+        border: 2px black solid;
+    }
+
+    input[type="submit"] {
+        border: 2px black solid;
+        color: darkblue;
+    }
+</style>
+<section id="major">
+    <h2 class="col-md-3">會員登入</h2>
+    <form action="@Url.Action("Login")" method="post">
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                <span class="control-label col-md-2">信箱登入</span>
+                <div class="col-md-10">
+                    <input type="text" id="fUserId" name="memail" required="required" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span class="control-label col-md-2">密碼</span>
+                <div class="col-md-10">
+                    <input type="password" id="fPwd" name="mpw" required="required" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="登入" class="btn btn-default" />
+                    @ViewBag.Message
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

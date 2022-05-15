@@ -1,0 +1,88 @@
+﻿@using Program_Menber.Models
+@model List<CMorder>
+@{
+    ViewBag.Title = "displayorderById";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <script type="text/javascript" src="jquery/jquery-1.8.3.js"></script>
+
+
+</head>
+
+<body>
+    <section id="major">
+        <h2 align="center">訂單資訊</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">下單日期</th>
+                    <th scope="col">產品</th>
+                    <th scope="col">廟宇</th>
+                    <th scope="col">數量</th>
+                    <th scope="col">總金額</th>
+                    <th scope="col">是否完成訂單</th>
+                    <th scope="col">照片</th>
+                    <th scope="col">備註</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int count = 0;
+
+                    foreach (CMorder c in Model)
+                    {
+                        count++;
+                        <tr>
+                            <th>@count</th>
+                            <td>@c.odate</td>
+                            <td>@c.oproduct</td>
+                            <td>@c.otem</td>
+                            <td>@c.ounit</td>
+                            <td>@c.opayment</td>
+                            <td> @c.ofin</td>
+                            <td>@c.opic</td>
+                            <td>@c.odetail</td>
+                            <td>
+                                @Html.ActionLink("刪除", "Delete", "Member", new { id = c.oid },
+                        new
+                        {
+                            onclick = "return confirm('確定要刪除嗎?')",
+                            Class = "btn btn-danger"
+                        })
+                            </td>
+                            <td>
+                                <input style="display: block;" id="button" type="button" value="我要結帳" data-bs-toggle="modal"
+                                       data-bs-target="#22" />
+                            </td>
+
+                        </tr>
+
+                        <tr>@Html.ActionLink("Back to List", "display", new { id = c.omid })</tr>
+
+
+                    }
+                }
+            </tbody>
+        </table>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        </section>
+</body>
+
+

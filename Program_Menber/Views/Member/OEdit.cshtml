@@ -1,0 +1,24 @@
+﻿@model Program_Menber.Models.CMorder
+@{
+    ViewBag.Title = "OEdit";
+}
+<section id="major">
+    <h2>訂單修改</h2>
+
+    <form method="post">
+        <input type="hidden" name="mid" value="@Model.oid">
+        <p>
+            產品數量<br />
+            <input type="text" name="munit" value="@Model.ounit">
+        </p>
+
+
+        <p><input type="submit" value="送出" /></p>
+    </form>
+
+
+    <div>
+        @Html.ActionLink("Back to List", "display", new { id = Model.omid })
+    </div>
+
+   </section>
